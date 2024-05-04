@@ -50,6 +50,7 @@ jobs:
 
       - name: Build Docker Image
         run: |
+          ls
           docker build -t demo-app .
           docker tag demo-app donbidds/demo-app
           docker push donbidds/demo-app
