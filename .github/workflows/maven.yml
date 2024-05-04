@@ -32,3 +32,14 @@ jobs:
       run: |
         mvn clean
         mvn -B package --file pom.xml
+        
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: DockerHub Login
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_PASSWORD }}
