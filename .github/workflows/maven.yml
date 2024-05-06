@@ -51,4 +51,6 @@ jobs:
       - name: Build and push
         run:
           ls
+          cd /usr/bin/bash
+          ls
               
