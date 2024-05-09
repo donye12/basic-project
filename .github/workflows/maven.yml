@@ -48,3 +48,10 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/test
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Pull image
+      run: docker pull donbidds/test
